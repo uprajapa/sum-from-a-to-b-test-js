@@ -1,6 +1,10 @@
 
 function sum(fromN, toN) {
-  // Sum all the values from fromN up to toN
+  let output = fromN;
+  if (fromN < toN) { // recusrsive case
+    output += sum(fromN + 1, toN);
+  }
+  return output;
 }
 
 module.exports = sum;
